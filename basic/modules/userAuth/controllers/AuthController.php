@@ -125,18 +125,18 @@ class AuthController extends Controller
             $user->resetKey = sha1(uniqid(time(), true));
             $user->authKey = sha1(uniqid(time(), true));
 
-            if($user->save()){
+//            if($user->save()){
 
-                Yii::$app->mailer->compose('toActivateUser',['user' => $user])
-                    ->setFrom('volikov.dmitrie@yandex.ru')
-                    ->setTo($user->email)
-                    ->setSubject('User activation in Yii2 project')
-                    ->send();
-
-                Yii::$app->getSession()->setFlash('success','Welcome to the club, budy! Open your mail and prove, that you deserve to participate in our club!');
+//                Yii::$app->mailer->compose('toActivateUser',['user' => $user])
+//                    ->setFrom('volikov.dmitrie@yandex.ru')
+//                    ->setTo($user->email)
+//                    ->setSubject('User activation in Yii2 project')
+//                    ->send();
+//
+//                Yii::$app->getSession()->setFlash('success','Welcome to the club, budy! Open your mail and prove, that you deserve to participate in our club!');
 
                 return $this->goHome();
-            }
+//            }
 			//Yii::$app->getSession()->setFlash('success','Welcome to the club, budy!');
 		}
 

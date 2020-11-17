@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?= $form->field($model, 'username', ['inputOptions' => ['id' => 'register-username']])->textInput(['autofocus' => true]) ?>
 
-        <?= $form->field($model, 'email', ['inputOptions' => ['id' => 'registser-email']]) ?>
+        <?= $form->field($model, 'email', ['inputOptions' => ['id' => 'register-email']]) ?>
 
         <?= $form->field($model, 'displayname', ['inputOptions' => ['id' => 'register-displayname']]) ?>
 
