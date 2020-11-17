@@ -135,7 +135,7 @@ class AuthController extends Controller
 
                 Yii::$app->getSession()->setFlash('success','Welcome to the club, budy! Open your mail and prove, that you deserve to participate in our club!');
 
-                return $this->goHome();
+//                return $this->goHome();
             }
 			//Yii::$app->getSession()->setFlash('success','Welcome to the club, budy!');
 		}
