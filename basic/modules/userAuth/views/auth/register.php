@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-register">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please404 fill out the following fields to register:</p>
+    <p>Please fill out the following fields to register:</p>
 
     <?php $form = ActiveForm::begin([
         'id' => 'register',
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?= $form->field($model, 'username', ['inputOptions' => ['id' => 'register-username']])->textInput(['autofocus' => true]) ?>
 
-        <?= $form->field($model, 'email', ['inputOptions' => ['id' => 'register-email']]) ?>
+        <?= $form->field($model, 'email', ['inputOptions' => ['id' => 'registser-email']]) ?>
 
         <?= $form->field($model, 'displayname', ['inputOptions' => ['id' => 'register-displayname']]) ?>
 
