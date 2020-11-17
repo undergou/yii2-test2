@@ -86,7 +86,7 @@ class AuthController extends Controller
                     return $this->goHome();
                 } else {
                     $model->login();
-                    return $this->goHome();
+//                    return $this->goHome();
                 }
             }
         }
