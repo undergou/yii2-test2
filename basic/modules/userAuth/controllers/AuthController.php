@@ -77,12 +77,13 @@ class AuthController extends Controller
                 Yii::$app->getSession()->setFlash('error','Who are you? We don`t know you!');
             } else{
 
-                $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->getId());
-                $checkActive = Yii::$app->authManager->getAssignment('active', $user->getId());
-
-                if(!$checkAdmin && !$checkActive){
-                    Yii::$app->getSession()->setFlash('error','Stop! You have not proved that you deserve to be with us!');
-                } else if(sha1($model->password) !== $user->password){
+//                $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->getId());
+//                $checkActive = Yii::$app->authManager->getAssignment('active', $user->getId());
+//
+//                if(!$checkAdmin && !$checkActive){
+//                    Yii::$app->getSession()->setFlash('error','Stop! You have not proved that you deserve to be with us!');
+//                } else
+                    if(sha1($model->password) !== $user->password){
                     return $this->goHome();
                 } else {
                     $model->login();
@@ -125,18 +126,18 @@ class AuthController extends Controller
             $user->resetKey = sha1(uniqid(time(), true));
             $user->authKey = sha1(uniqid(time(), true));
 
-//            if($user->save()){
+            if($user->save()){
 
-//                Yii::$app->mailer->compose('toActivateUser',['user' => $user])
-//                    ->setFrom('volikov.dmitrie@yandex.ru')
-//                    ->setTo($user->email)
-//                    ->setSubject('User activation in Yii2 project')
-//                    ->send();
-//
-//                Yii::$app->getSession()->setFlash('success','Welcome to the club, budy! Open your mail and prove, that you deserve to participate in our club!');
+                Yii::$app->mailer->compose('toActivateUser',['user' => $user])
+                    ->setFrom('volikov.dmitrie@yandex.ru')
+                    ->setTo($user->email)
+                    ->setSubject('User activation in Yii2 project')
+                    ->send();
+
+                Yii::$app->getSession()->setFlash('success','Welcome to the club, budy! Open your mail and prove, that you deserve to participate in our club!');
 
                 return $this->goHome();
-//            }
+            }
 			//Yii::$app->getSession()->setFlash('success','Welcome to the club, budy!');
 		}
 
