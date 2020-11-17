@@ -74,7 +74,8 @@ class AuthController extends Controller
             $user = User::findOne(['username' => $model->username]);
 
             if(!$user){
-                Yii::$app->getSession()->setFlash('error','Who are you? We don`t know you!');
+//                Yii::$app->getSession()->setFlash('error','Who are you? We don`t know you!');
+//                return $this->goHome();
             } else{
 
                 $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->getId());
@@ -86,7 +87,7 @@ class AuthController extends Controller
                     return $this->goHome();
                 } else {
                     $model->login();
-//                    return $this->goHome();
+                    return $this->goHome();
                 }
             }
         }
