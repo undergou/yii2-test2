@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-register">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to register:</p>
+    <p>Please404 fill out the following fields to register:</p>
 
     <?php $form = ActiveForm::begin([
         'id' => 'register',
