@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="users-create">
 
-    <h1>bad gateway<?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="users-form">
 
@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?= $form->field($model, 'username',['inputOptions' => ['id' => 'register-username']])->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'email',['inputOptions' => ['id' => 'register-email']])->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'email',['inputOptions' => ['id' => 'register-emsail']])->textInput(['maxlength' => true]) ?>
 
         <?= $form->field($model, 'displayname',['inputOptions' => ['id' => 'register-displayname']])->textInput(['maxlength' => true]) ?>
 
