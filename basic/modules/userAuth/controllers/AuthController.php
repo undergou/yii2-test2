@@ -83,7 +83,7 @@ class AuthController extends Controller
                 if(!$checkAdmin && !$checkActive){
                     Yii::$app->getSession()->setFlash('error','Stop! You have not proved that you deserve to be with us!');
                 } else if(sha1($model->password) !== $user->password){
-                    return $this->goHome();
+                    Yii::$app->getSession()->setFlash('error','ERROR!BLEAT!!');
                 } else {
                     $model->login();
                     return $this->goHome();
