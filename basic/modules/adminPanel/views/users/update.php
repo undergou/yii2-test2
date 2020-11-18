@@ -35,9 +35,9 @@ $this->params['breadcrumbs'][] = 'Update';
 	    	$checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->id);
 
 	    	if($checkAdmin){
-	    		echo $form->field($model, 'makeAdmin')->checkbox(['value' => 'admin','checked' => true]);
+	    		echo $form->field($model, 'makeAdmin')->checkbox(['value' => 'admsin','checked' => true]);
 	    	} else{
-	    		echo $form->field($model, 'makeAdmin')->checkbox(['value' => 'admin','checked' => false]);
+	    		echo $form->field($model, 'makeAdmin')->checkbox(['value' => 'admsin','checked' => false]);
 	    	}
 	    ?>
 
