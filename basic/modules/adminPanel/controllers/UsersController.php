@@ -91,7 +91,7 @@ class UsersController extends Controller
                     ->setSubject('User activation in Yii2 project')
                     ->send();
             }
-            return $this->redirect(['view', 'id' => $model->id]);
+//            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
