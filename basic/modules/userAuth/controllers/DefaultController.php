@@ -125,7 +125,7 @@ class DefaultController extends Controller
 
                 if($model->sendEmail()){
                     Yii::$app->getSession()->setFlash('warning','Please, check your E-mail!');
-                    return $this->goHome();
+//                    return $this->goHome();
                 } else{
                     Yii::$app->getSession()->setFlash('error','Impossible to reset password!');
                 }
