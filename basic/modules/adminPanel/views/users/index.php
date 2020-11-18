@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'password',
             //'resetKey',
 
-            ['class' => 'yii\grid\ActionColumn'],
+//            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
