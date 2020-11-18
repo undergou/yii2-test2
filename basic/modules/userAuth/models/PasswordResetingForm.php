@@ -37,8 +37,8 @@
     	public function resetPassword(){
 
     		$user = $this->_user;
-//    		$user->setPassword($this->password);
-//    		$user->resetKey = sha1(uniqid(time(), true));
+    		$user->setPassword($this->password);
+    		$user->resetKey = sha1(uniqid(time(), true));
     		return $user->save();
 
     	}
