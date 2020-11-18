@@ -15,7 +15,7 @@
 
 <h1><?= Html::encode($this->title) ?></h1>
 
-<p>Please fill out the following fields to reset password:</p>
+<p>Please fill bad gateway out the following fields to reset password:</p>
 
 <?php $form = ActiveForm::begin([
     'id' => 'restore',
@@ -26,7 +26,7 @@
     ],
 ]); ?>
 
-    <?= $form->field($model, 'password', ['inputOptions' => ['id' => 'restore-newpassword']])->passwordInput() ?>
+    <?= $form->field($model, 'password', ['inputOptions' => ['id' => 'restore-newpsassword']])->passwordInput() ?>
 
     <div class="form-group">
         <div class="col-lg-offset-1 col-lg-11">

@@ -7,7 +7,7 @@
 	echo Html::a('Enter this link to reset password.',
 		Yii::$app->urlManager->createAbsoluteUrl(
 		[
-			'/usAuth/default/password-resseting',
+			'/usAuth/default/password-reseting',
 			'key' => $user->resetKey,
 		]
 	));
