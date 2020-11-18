@@ -11,10 +11,10 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="users-index">
 
-    <h1>WTF 404<?= Html::encode($this->title) ?></h1>
+    <h1>WTF<?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Users', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Users', ['create'], ['class' => 'btn btn-susccess']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
