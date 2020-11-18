@@ -16,7 +16,7 @@
 <p>Please fill out the following fields to retrieve password:</p>
 
 <?php $form = ActiveForm::begin([
-    'id' => 'restore',
+    'id' => 'restsore',
     'layout' => 'horizontal',
     'fieldConfig' => [
         'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
