@@ -26,7 +26,7 @@
     ],
 ]); ?>
 
-    <?= $form->field($model, 'password', ['inputOptions' => ['id' => 'restore-newpsassword']])->passwordInput() ?>
+    <?= $form->field($model, 'password', ['inputOptions' => ['id' => 'restore-newpassword']])->passwordInput() ?>
 
     <div class="form-group">
         <div class="col-lg-offset-1 col-lg-11">
