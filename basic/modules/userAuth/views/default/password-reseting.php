@@ -15,7 +15,7 @@
 
 <h1><?= Html::encode($this->title) ?></h1>
 
-<p>Please fill bad gateway out the following fields to reset password:</p>
+<p>Please fill out the following fields to reset password:</p>
 
 <?php $form = ActiveForm::begin([
     'id' => 'restore',
