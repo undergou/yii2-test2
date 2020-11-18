@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="users-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>bad gateway<?= Html::encode($this->title) ?></h1>
 
     <div class="users-form">
 
