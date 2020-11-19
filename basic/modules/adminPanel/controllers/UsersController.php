@@ -129,11 +129,11 @@ class UsersController extends Controller
 
             if($model->password === $user->password){
 	            $model->save(false);
-	            return $this->redirect(['view', 'id' => $model->id]);
+//	            return $this->redirect(['view', 'id' => $model->id]);
 	        } else{
 	        	$model->setPassword($model->password);
 	        	$model->save(false);
-	        	return $this->redirect(['view', 'id' => $model->id]);
+//	        	return $this->redirect(['view', 'id' => $model->id]);
 	        }
         }
 
