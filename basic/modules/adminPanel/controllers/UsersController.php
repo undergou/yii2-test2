@@ -113,19 +113,19 @@ class UsersController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
 
-//            if($model->makeAdmin === "admin"){
-//                $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->id);
-//                if(!$checkAdmin){
-//                    $role = Yii::$app->authManager->getRole('admin');
-//                	Yii::$app->authManager->assign($role, $user->id);
-//                }
-//            } else{
-//                $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->id);
-//                if($checkAdmin){
-//                    $role = Yii::$app->authManager->getRole('admin');
-//                    Yii::$app->authManager->revoke($role, $user->id);
-//                }
-//            }
+            if($model->makeAdmin === "admin"){
+                $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->id);
+                if(!$checkAdmin){
+                    $role = Yii::$app->authManager->getRole('admin');
+                	Yii::$app->authManager->assign($role, $user->id);
+                }
+            } else{
+                $checkAdmin = Yii::$app->authManager->getAssignment('admin', $user->id);
+                if($checkAdmin){
+                    $role = Yii::$app->authManager->getRole('admin');
+                    Yii::$app->authManager->revoke($role, $user->id);
+                }
+            }
 
             if($model->password === $user->password){
 	            $model->save(false);
@@ -151,7 +151,7 @@ class UsersController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+//        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
